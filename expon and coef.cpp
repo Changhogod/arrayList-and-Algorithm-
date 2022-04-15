@@ -32,7 +32,7 @@ int main() {
 	polyPointer C = cpadd(A, B);
 	print_polynomial(C);
 	cout << endl;
-	/*cout << "A´Â ´ÜÇ×À¸·Î ÀÔ·ÂÇÏ½Ã¿À(single Mul test)" << endl;
+	/*cout << "AëŠ” ë‹¨í•­ìœ¼ë¡œ ìž…ë ¥í•˜ì‹œì˜¤(single Mul test)" << endl;
 	 polyPointer D = singleMul(A->link, B);
 	print_polynomial(D);
 	cout << endl;*/
@@ -61,7 +61,7 @@ polyPointer getNode(void) {
 	else {
 		node = (polyPointer)malloc(sizeof(polyNode));
 		if (!node) {
-			fprintf(stderr, "¸Þ¸ð¸®°¡ ÃæºÐÇÏÁö ¾Ê½À´Ï´Ù.");
+			fprintf(stderr, "ë©”ëª¨ë¦¬ê°€ ì¶©ë¶„í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			exit(1);
 		}
 	}
@@ -124,7 +124,7 @@ polyPointer cpadd(polyPointer a, polyPointer b) {
 }
 void attach(float coefficient, int exponent, polyPointer* c)
 {
-	// ´ÙÇ×½Ä¿¡ »õ·Î¿î Ç×À» Ãß°¡ÇÏ´Â ÇÔ¼ö
+	// ë‹¤í•­ì‹ì— ìƒˆë¡œìš´ í•­ì„ ì¶”ê°€í•˜ëŠ” í•¨ìˆ˜
 	polyPointer temp = getNode();
 	temp->coef = coefficient;
 	temp->expon = exponent; 
@@ -139,7 +139,7 @@ polyPointer create_polynomial() {
 	A->link = A;
 	A->expon = -1;
 	int coef = 0; int expon = 0;
-	cout << "°è¼ö¿Í Â÷¼ö¸¦ ¼øÂ÷ÀûÀ¸·Î ÀÔ·ÂÇÏ°í ÀÔ·Â¿Ï·á½Ã -1 -1À» ÀÔ·ÂÇÏ½Ã¿À." << endl;
+	cout << "ê³„ìˆ˜ì™€ ì°¨ìˆ˜ë¥¼ ìˆœì°¨ì ìœ¼ë¡œ ìž…ë ¥í•˜ê³  ìž…ë ¥ì™„ë£Œì‹œ -1 -1ì„ ìž…ë ¥í•˜ì‹œì˜¤." << endl;
 	while(true){
 		cin >> coef >> expon;
 	if (coef == -1 && expon == -1)
