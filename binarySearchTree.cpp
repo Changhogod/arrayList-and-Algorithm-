@@ -21,7 +21,7 @@ int get_height_count(struct node* ptr);
 int get_leaf_count(struct node* ptr);
 int main() {
 	
-		printf("nÀ» ÀÔ·ÂÇÏ¼¼¿ä>>");
+		printf("nì„ ì…ë ¥í•˜ì„¸ìš”>>");
 		int n;
 		scanf_s("%d", &n);
 		clock_t start, end;
@@ -30,12 +30,12 @@ int main() {
 		inorder(tree);
 		end = clock();
 		printf("[time : %f]\n", (float)(end - start) / CLOCKS_PER_SEC);
-		printf("³ëµå¼ö : %d\n", get_node_count(tree));
+		printf("ë…¸ë“œìˆ˜ : %d\n", get_node_count(tree));
 
-		printf("³ôÀÌ : %d\n", get_height_count(tree));
-		printf("¸®ÇÁ ³ëµå ¼ö : %d\n", get_leaf_count(tree));
+		printf("ë†’ì´ : %d\n", get_height_count(tree));
+		printf("ë¦¬í”„ ë…¸ë“œ ìˆ˜ : %d\n", get_leaf_count(tree));
 
-		cout << "Á¾·áÇÏ·Á¸é -1À» ÀÔ·ÂÇÏ¼¼¿ä.";
+		cout << "ì¢…ë£Œí•˜ë ¤ë©´ -1ì„ ì…ë ¥í•˜ì„¸ìš”.";
 		int temp;
 
 		cin >> temp;
@@ -141,7 +141,7 @@ int get_leaf_count(struct node* ptr)
 	int count = 0;
 	if (ptr != NULL) {
 		if (ptr->lchild == NULL &&
-			ptr->rchild == NULL) // ´Ü¸» ³ëµå
+			ptr->rchild == NULL) // ë‹¨ë§ ë…¸ë“œ
 			return 1;
 		else count = get_leaf_count(ptr->lchild) +
 			get_leaf_count(ptr->rchild);
