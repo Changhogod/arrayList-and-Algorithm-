@@ -76,7 +76,7 @@ int main() {
 	counter = 0;
 	binsearch(b, 50000, 0, 49999);
 	cout << counter << ' ';
-	cout << "Á¾·áÇÏ·Á¸é 0À» ´©¸£½Ã¿À.";
+	cout << "ÃÂ¾Â·Ã¡Ã‡ÃÂ·ÃÂ¸Ã© 0Ã€Â» Â´Â©Â¸Â£Â½ÃƒÂ¿Ã€.";
 	int input;
 	cin>>input;
 	if (input == 0)
